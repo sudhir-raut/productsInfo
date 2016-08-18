@@ -1,0 +1,59 @@
+body {
+    background-color: #f5f5dc;
+}
+
+.header {
+    content: "";
+    clear: both;
+    display: block;
+    float: left;
+    width: 100%;
+    background-color: #deb887;
+    height: 50px;
+}
+.sub-header {
+    height: 47px;
+    width: 20%;
+    float: left;
+    display: inline-block;
+}
+.sub-header h1 {
+    font-family: Garuda;
+    font-size: 30px;
+    color: #ff1493;
+    text-align: center;
+    margin-top: inherit;
+}
+.productInfo {
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    margin-top: 10px;
+    background-color: #deb887;
+    float: left;
+}
+
+#productInfo {
+    float: left;
+    display: inline-block;
+    /*margin-left: 40%;*/
+    color: blue;
+}
+
+#users b {
+    color: #006400;
+}
+
+.signin {
+    width: 20px;
+    float: right;
+    display: inline-block;
+    top: 10px;
+    right: 10px;
+}
+.signup {
+    width: 20px;
+    float: right;
+    display:inline-block;
+
+}
