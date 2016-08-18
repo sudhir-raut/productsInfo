@@ -44,16 +44,34 @@ body {
     color: #006400;
 }
 
-.signin {
-    width: 20px;
+.button {
+    width: 80%;
     float: right;
     display: inline-block;
     top: 10px;
     right: 10px;
 }
-.signup {
-    width: 20px;
-    float: right;
-    display:inline-block;
 
+#signup,#signin{
+    margin-top:15px;
+    margin-right: 15px;
+    float: right;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100px;
+}
+
+#signin {
+    background-color: khaki;
+    color: coral;
+}
+#signup {
+    background-color: coral;
+    color: khaki;
 }

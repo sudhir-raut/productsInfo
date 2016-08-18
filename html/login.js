@@ -19,17 +19,4 @@ function login() {
     userName = document.getElementById("username").value;
     password = document.getElementById("pwd").value;
     socket.emit("login", userName, password);
-    console.log(userName + " Connected");
-
-    socket.on("alert",function(alertMessage,ret_val){
-        if(ret_val == 1) {
-            //socket.emit('uname',userName);
-            window.open('home.html', '_self');
-
-        }
-        else {
-            alert(alertMessage);
-        }
-    });
-
 }
