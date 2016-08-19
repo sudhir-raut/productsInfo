@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 
 var userSchema = new Schema({
     name: String,
-    age: Number,
+    password:String,
     admin: Boolean
 });
 
@@ -16,6 +16,6 @@ var productSchema = new Schema ({
     imgUrl : String
 });
 
-exports.User = mongoose.model('User', userSchema);
+exports.Users = mongoose.model('User', userSchema);
 exports.Products = mongoose.model('Products',productSchema);
 

@@ -1,23 +1,121 @@
 <!DOCTYPE html>
+<html>
 <head>
 
     <link rel="stylesheet" type="text/css" href="home.css">
     <script src="/socket.io/socket.io.js"></script>
     <script src="home.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#signin").click(function(){
+                $("#signinMod").modal();
+            });
+        });
+
+        $(document).ready(function(){
+            $("#signup").click(function(){
+                $("#signupMod").modal();
+            });
+        });
+
+    </script>
+
 
 </head>
 
 <body>
+
 <div class="header">
 
     <div class="sub-header">
         <h1>products</h1>
     </div>
+
     <div class ="button">
-        <button id="signup" onclick="signup()">Sign Up</button>
-        <button id="signin" onclick="signin()">Sign In</button>
+
+        <button type="button" class="btn btn-default btn-lg" id="signup">Sign Up</button>
+        <!-- Modal -->
+        <div class="modal fade" id="signupMod" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="padding:35px 50px;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4> Sign Up</h4>
+                    </div>
+                    <div id="alert"></div>
+                    <div class="modal-body" style="padding:40px 50px;">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="newUserName"><span class="glyphicon glyphicon-user"></span> Username</label>
+                                <input type="text" class="form-control" id="newUserName" placeholder="Enter Username">
+                            </div>
+                            <div class="form-group">
+                                <label for="newpwd1"><span class="glyphicon glyphicon-eye-open"></span> Create New Password</label>
+                                <input type="password" class="form-control" id="newpwd1" placeholder="Enter password">
+                            </div>
+                            <div class="form-group">
+                                <label for="newpwd2"><span class="glyphicon glyphicon-eye-open"></span> Re-enter Password</label>
+                                <input type="password" class="form-control" id="newpwd2" placeholder="Enter password">
+                            </div>
+
+                            <button type="submit" class="btn btn-success btn-block" onclick="save()"> Submit</button>
+                            <!-- btn-success btn-block-->
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <button type="button" class="btn btn-default btn-lg" id="signin">Sign In</button>
+            <!-- Modal -->
+            <div class="modal fade" id="signinMod" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header" style="padding:35px 50px;">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4><span class="glyphicon glyphicon-lock"></span> Sign In</h4>
+                        </div>
+                        <div class="modal-body" style="padding:40px 50px;">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label for="username"><span class="glyphicon glyphicon-user"></span> Username</label>
+                                    <input type="text" class="form-control" id="username" placeholder="Enter Username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+                                    <input type="text" class="form-control" id="pwd" placeholder="Enter password">
+                                </div>
+                                <button type="submit" class="btn btn-success btn-block"></span> Sign In</button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                            <p>Not a member? <a href="#signupMod">Sign Up</a></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
     </div>
+
 </div>
+
 <div>
     <div class="productInfo">
         <div id="productInfo"></div>
@@ -25,4 +123,6 @@
 
 </div>
 
+
 </body>
+</html>
